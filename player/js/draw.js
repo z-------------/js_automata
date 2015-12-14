@@ -1,6 +1,4 @@
 automaton.draw = function() {
-    console.log("draw()");
-
     var ctx = automaton.canvas.ctx;
 
     var cellSize = JSA_GRID_SIZE;

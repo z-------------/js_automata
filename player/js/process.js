@@ -1,6 +1,4 @@
 automaton.step = function() {
-    console.log("step()");
-
     if (automaton.rawStepScript) {
         var w = automaton.size.width;
         var h = automaton.size.height;
@@ -67,8 +65,6 @@ automaton.step = function() {
                         }
                     }
 
-                    console.log(indexes);
-
                     return result;
                 };
 
@@ -78,13 +74,11 @@ automaton.step = function() {
                 /* live */
                 cell.begin = function() {
                     newCells[i] = true;
-                    console.log("live!");
                 };
 
                 /* die */
                 cell.die = function() {
                     newCells[i] = false;
-                    console.log("die!");
                 };
 
                 /* run the script */
@@ -96,9 +90,7 @@ automaton.step = function() {
             }
 
             automaton.cells = newCells;
-            console.log(automaton.cells);
         }());
     } else {
-        console.log("no script set");
     }
 };
