@@ -13,7 +13,8 @@ automaton.cells = [];
 automaton.size = {};
 
 automaton.rawStepScript = null;
-automaton.stepInterval = null;
+automaton.stepTimeout = null;
 automaton.step = null;
+automaton.draw = null;
 
 automaton.canvas = {};

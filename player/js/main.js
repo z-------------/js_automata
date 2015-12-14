@@ -31,6 +31,18 @@ document.querySelector(".control--script-input").addEventListener("change", func
     reader.readAsText(file);
 });
 
+document.querySelector(".control--play").addEventListener("click", function() {
+    automaton.stepInterval = setInterval(function() {
+        automaton.step();
+        automaton.draw();
+    }, 100);
+});
+
+document.querySelector(".control--pause").addEventListener("click", function() {
+    clearInterval(automaton.stepInterval);
+    automaton.draw();
+});
+
 /* let's go */
 
 automaton.size.width = JSA_DEFAULT_GRID_WIDTH;
