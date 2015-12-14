@@ -5,6 +5,12 @@ automaton.step = function() {
 
         var newCells = new Array(w * h);
 
+        var availableDirs = [
+            "leftup", "up", "rightup",
+            "left", "right",
+            "leftdown", "down", "rightdown"
+        ];
+
         (function(){
             for (var i = 0; i < newCells.length; i++) {
                 var cell = {};
@@ -23,8 +29,6 @@ automaton.step = function() {
                         "down": i + w,
                         "rightdown": i + (w + 1)
                     };
-
-                    var availableDirs = Object.keys(indexes);
 
                     // delete empty cells (i.e. ones that go off the grid)
                     if (i < w) { // first row
@@ -84,8 +88,9 @@ automaton.step = function() {
                 /* run the script */
                 eval(automaton.rawStepScript);
 
+                /* use previous state if not set */
                 if (typeof newCells[i] === "undefined") {
-                    newCells[i] = !!automaton.cells[i]; // use previous state if not set
+                    newCells[i] = !!automaton.cells[i];
                 }
             }
 
