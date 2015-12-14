@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>js_automata</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>js_automata</h1>
+        <div id="canvas-container">
+            <canvas id="canvas">
+                <p>Your browser doesn't support the canvas tag. Please get a new one.</p>
+            </canvas>
+        </div>
+        <div id="controls-container">
+            <label>
+                <span>Load script</span>
+                <input type="file" accept=".txt,.js,text/*" class="control control--script-input">
+            </label>
+            <label>
+                <button class="control control--step">Step</button>
+            </label>
+            <label>
+                <button class="control control--random-fill">Random fill</button>
+            </label>
+        </div>
+
+        <script src="js/init.js"></script>
+        <script src="js/process.js"></script>
+        <script src="js/draw.js"></script>
+        <script src="js/touch.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

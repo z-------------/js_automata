@@ -1,0 +1,13 @@
+*, :before, :after {
+    box-sizing: inherit;
+
+    font-family: inherit;
+    color: inherit;
+}
+
+body {
+    box-sizing: border-box;
+
+    font-size: 12px;
+    font-family: "Roboto Mono", monospace;
+}
