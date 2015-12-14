@@ -8,6 +8,8 @@
 body {
     box-sizing: border-box;
 
+    background-color: #EEEEEE;
+
     font-size: 12px;
     font-family: "Roboto Mono", monospace;
 }
